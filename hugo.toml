@@ -1,4 +1,12 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'fr-fr'
+title = 'Patrimoine | Saint-Romans'
 theme = 'ananke'
+defaultContentLanguage = 'fr'
+featured_image = 'assets/images/saint-romans.jpg'
+[params]
+	subtitle = "Découvrez l'histoire de Saint-Romans, racontée par ses habitants"
+
+read_more_copy = "Lire"
+date_format = "2 January 2006"
+site_logo = "images/logo-saint-romans.png"
