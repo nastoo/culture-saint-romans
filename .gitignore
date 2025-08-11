@@ -1,0 +1,22 @@
+
+# Hugo build output
+/public/
+/resources/
+/resources/_gen/
+.hugo_build.lock
+
+# Hugo binaries (optional, if built for platform)
+/hugo.exe
+/hugo.linux
+/hugo.darwin
+
+# Dependency and system files
+node_modules/
+.DS_Store
+.idea
+logs/
+*.log
+.cache/
+.tmp/
+.sass-cache/
+dist/
