@@ -32,5 +32,4 @@ jobs:
           remote_path: /sites/culture-dev.nasto.eu # Change this to your server's deploy path
           remote_host: ${{ secrets.SERVER_IP }}
           remote_user: ${{ secrets.SERVER_USER }}
-          # Private key should be added as a secret in GitHub and base64 encoded
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}    # Use remote_key instead of ssh_private_key
