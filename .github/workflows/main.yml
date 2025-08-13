@@ -29,7 +29,7 @@ jobs:
         with:
           switches: -avz --delete
           path: ./public/              # Hugo's default output directory
-          remote_path: /sites/culture-dev.nasto.eu # Change this to your server's deploy path
+          remote_path: ~/sites/culture-dev.nasto.eu # Change this to your server's deploy path
           remote_host: ${{ secrets.SERVER_IP }}
           remote_user: ${{ secrets.SERVER_USER }}
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}    # Use remote_key instead of ssh_private_key
