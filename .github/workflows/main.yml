@@ -25,7 +25,7 @@ jobs:
         run: hugo --minify
 
       - name: Deploy to server via rsync
-        uses: burnett01/rsync-deployments@v5
+        uses: burnett01/rsync-deployments@v7.0.2
         with:
           switches: -avz --delete
           path: ./public/              # Hugo's default output directory
