@@ -1,0 +1,36 @@
+name: Build and Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - main       # or your default branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive  # if you use themes as git submodules
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true                 # needed if you use SCSS or Hugo Pipes
+
+      - name: Build the site
+        run: hugo --minify
+
+      - name: Deploy to server via rsync
+        uses: burnett01/rsync-deployments@v5
+        with:
+          switches: -avz --delete
+          path: ./public/              # Hugo's default output directory
+          remote_path: /sites/culture-dev.nasto.eu # Change this to your server's deploy path
+          remote_host: ${{ secrets.SERVER_IP }}
+          remote_user: ${{ secrets.SERVER_USER }}
+          # Private key should be added as a secret in GitHub and base64 encoded
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
