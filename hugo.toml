@@ -1,9 +1,10 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://culture-dev.nasto.eu'
 languageCode = 'fr-fr'
 title = 'Patrimoine | Saint-Romans'
 theme = 'ananke'
 defaultContentLanguage = 'fr'
 featured_image = 'assets/images/saint-romans.jpg'
+enableRobotsTXT = false
 
 [params]
 custom_css = ["custom.scss"]
