@@ -25,11 +25,12 @@ jobs:
         run: hugo --minify
 
       - name: Deploy to server via rsync
-        uses: burnett01/rsync-deployments@7.0.2
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
-          switches: -avz --delete
-          path: ./public/              # Hugo's default output directory
-          remote_path: ~/sites/culture-dev.nasto.eu # Change this to your server's deploy path
-          remote_host: ${{ secrets.SERVER_IP }}
-          remote_user: ${{ secrets.SERVER_USER }}
-          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}    # Use remote_key instead of ssh_private_key
+          username: ${{ secrets.SERVER_USER }}
+          server: ${{ secrets.SERVER_IP }}
+          port: 22
+          local_path: './public/*'
+          remote_path: '~/'
+          sftp_only: true
+          password: ${{ secrets.SERVER_PASSWORD }}          
