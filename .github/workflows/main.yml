@@ -31,6 +31,6 @@ jobs:
           server: ${{ secrets.SERVER_IP }}
           port: 22
           local_path: './public/*'
-          remote_path: '~/'
+          remote_path: '/'
           sftp_only: true
           password: ${{ secrets.SERVER_PASSWORD }}          
