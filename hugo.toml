@@ -9,6 +9,7 @@ enableRobotsTXT = false
 
 [params]
 custom_css = ["custom.scss"]
+paginate  = 8 
 read_more_copy = "Lire"
 date_format = "2 January 2006"
 site_logo = "images/logo-saint-romans.png"
