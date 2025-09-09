@@ -8,6 +8,8 @@ featured_image = 'assets/images/saint-romans.jpg'
 enableRobotsTXT = false
 
 [params]
+show_recent_posts = true
+recent_posts_number =  10
 custom_css = ["custom.scss"]
 paginate  = 8 
 read_more_copy = "Lire"
