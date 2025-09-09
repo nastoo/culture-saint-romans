@@ -1,4 +1,5 @@
-baseURL = 'https://culture-dev.nasto.eu'
+baseURL = 'http://culture.saint-romans.fr'
+# baseURL = 'https://culture-dev.nasto.eu'
 languageCode = 'fr-fr'
 title = 'Patrimoine | Saint-Romans'
 theme = 'ananke'
